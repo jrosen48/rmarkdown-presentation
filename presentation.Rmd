@@ -1,0 +1,64 @@
+---
+title: "An Informal, Open Introduction to Using R Markdown in Education"
+author: "Joshua Rosenberg"
+date: "2019-05-15 (last updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    css: [default, metropolis, metropolis-fonts, custom.css]
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+library(knitr)
+library(tidyverse)
+library(dataedu)
+```
+
+# #whoami
+
+.pull-left[
+* Joshua Rosenberg, Ph.D.
+* Contact: 
+  * @jrosenberg6432
+  * jmrosenberg@utk.edu
+  * https://joshuamrosenberg.com
+* Assistant Professor, STEM Education, University of Tennessee, Knoxville
+* Dad (26 month toddler)
+* Primary areas of interest:
+  * Science education
+  * Data science (for) education
+  * Data science in education
+]
+
+```{r, out.width = "350px", echo = FALSE, fig.align = "center"}
+include_graphics("img/jr-joro.jpg")
+```
+
+### Following along with the presentation
+
+- Code: https://github.com/jrosen48/rmarkdown-presentation
+- Presentation: https://jrosen48.github.io/rmarkdown-presentation
+
+---
+class: inverse, center, middle
+# Background/Motivation
+---
+
+# Rationale and Aim
+
+- Mixed effects (or multilevel) models are extensions of linear models (regressions)
+- Commonly used in experimental and observational research and policy and evaluation contexts
+- Are less widely-used by data scientists
+- One piece of evidence: Cross Validated has 1,392 questions tagged #mixed-model that are unanswere (of 3,337 total questions)
+- I am trying to introduce mixed effects model as a data science(-*ish*) statistical method that can be useful and is easy to estimate and interpret.
+
+---
+
+# Example
+
+---
