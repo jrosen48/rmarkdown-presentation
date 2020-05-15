@@ -52,9 +52,9 @@ include_graphics("img/jr-joro.jpg")
 
 ## Expectancy-value theory
 
-We choose things that we think we *can do well* and that are *valuable* to us
+We choose things that we are *confident* that we can do well and that are *valuable* to us
 
-We do these in some *context*: our sense of belonging impacts what we choose to do
+We do these in a sociocultural *context*: our sense of belonging impacts what we choose to do
 
 ## An argument about RMarkdown
 
@@ -64,6 +64,21 @@ problems that are important to you**
 
 ---
 
-# Example
+# Structure
+
+## Timing
+
+- First 20 minutes: Introduction (to establish *value*)
+- Second 20 minutes: You working through an R Markdown document (in RStudio Cloud) (to build *confidence*)
+- Final 20 minutes: Discussion
+
+---
+
+# Introduction
+
+## 
+
+---
+
 
 ---
