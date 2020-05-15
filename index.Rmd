@@ -47,6 +47,7 @@ include_graphics("img/jr-joro.jpg")
 
 - Code: https://github.com/jrosen48/rmarkdown-presentation
 - Presentation: https://jrosen48.github.io/rmarkdown-presentation
+- RStudio Cloud: https://rstudio.cloud/project/863169
 
 ---
 
@@ -121,6 +122,8 @@ problems that are important to you**
 # Try it out!
 
 - `analyze-form-responses-try-it-out.rmd`
+
+- https://rstudio.cloud/project/863169
 
 ---
 
