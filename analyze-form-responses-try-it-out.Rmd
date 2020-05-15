@@ -1,0 +1,130 @@
+---
+title: "Analyze Form Responses"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Loading packages and reading data
+
+First, we'll load two packages that we will use. These add particular functionality
+to R.
+
+```{r}
+library(tidyverse)
+library(janitor)
+library(lubridate)
+```
+
+We'll read data from a URL. Note that the data is *anonymized* and was "published" via
+Google Sheets:
+
+```{r}
+form_data <- read_csv("https://docs.google.com/spreadsheets/d/e/2PACX-1vQWUfMMUboX4YMwz97zz_Z-lh2NrBbMbxVOf56LQooDHtdepLh-_-yXKOLOGHNdRmZI2Xn2kUVtstHH/pub?output=csv")
+```
+
+# Preparing data
+
+## Renaming variables
+
+Let's rename the variables to be easier to use.
+
+Before that, let's clean them:
+
+```{r}
+form_data <- clean_names(form_data)
+
+names(form_data)
+```
+
+They are still very long; however, now, we can more easily rename them:
+
+```{r}
+form_data <- form_data %>% 
+  rename(prior_exp = what_is_the_extent_of_your_prior_experience_using_r_markdown,
+         why_interest = why_in_brief_are_you_interested_in_learning_r_markdown_or_r,
+         utk_affiliated = are_you_affiliated_with_the_university_of_tennessee_knoxville_as_a_student_or_faculty_staff_member,
+         comments = do_you_have_any_other_questions_or_comments)
+```
+
+## Modifying variables
+
+One variables need some additional processing to be more useful to us, `timestamp`.
+
+We'll start with `timestamp`, which needs to be recognized as a time:
+
+```{r}
+form_data <- form_data %>% 
+  mutate(timestamp = mdy_hms(timestamp))
+```
+
+Let's check that it worked:
+
+```{r}
+form_data
+```
+
+# Try it out!
+
+## Count them up!
+
+Now, it's your turn to try it out.
+
+First, try to determine how many respondents were UTK affiliated, using the `count()` 
+function. To use this, you have to include the name of the variable that you want
+to count between the open and close parentheses just following the word "count".
+
+You don't need to quote the variable - you replace ??? with its name, and then 
+click run (the green arrow to the far right of the chunk).
+
+```{r}
+form_data %>% 
+  count(???)
+```
+
+## Filter
+
+Imagine we wanted to filter the data to only include those with prior experience 
+at the value of 4 or lower. We can use the `filter()` function to do this.
+
+Filter requires a *logical condition* created by a *logical operator*, such as 
+the following:
+
+```{r, eval = FALSE}
+==
+>
+<
+>=
+<=
+```
+
+Which logical operator can you use to only include those with prior experience 
+at the value of 4 or lower? Replace ??? below and then click run to see the 
+result.
+
+```{r}
+form_data %>% 
+  filter(prior_exp ???)
+```
+
+##
+
+Last, imagine that we wish to plot the distribution of prior experience. We 
+can use the ggplot2 package to do this, replacing the ??? with the name of 
+the variable you want to plot
+
+```{r}
+ggplot(form_data, 
+       aes(x = ???)) +
+  geom_histogram()
+```
+
+# Extensions
+
+Made it through he above? Try a few extensions. Here are a few ideas:
+
+- Plot the number of responses over time
+- Plot different histograms based upon UTK affiliation
+- Explore the content of text
