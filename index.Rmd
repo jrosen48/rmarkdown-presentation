@@ -35,27 +35,32 @@ library(dataedu)
   * Data science in education
 ]
 
-```{r, out.width = "350px", echo = FALSE, fig.align = "center"}
+```{r, out.width = "400px", echo = FALSE, fig.align = "center"}
 include_graphics("img/jr-joro.jpg")
 ```
 
-### Following along with the presentation
+<br> 
+<br>
+### *Following along*
 
 - Code: https://github.com/jrosen48/rmarkdown-presentation
 - Presentation: https://jrosen48.github.io/rmarkdown-presentation
 
 ---
-class: inverse, center, middle
-# Background/Motivation
----
 
-# Rationale and Aim
+# Motivation
 
-- Mixed effects (or multilevel) models are extensions of linear models (regressions)
-- Commonly used in experimental and observational research and policy and evaluation contexts
-- Are less widely-used by data scientists
-- One piece of evidence: Cross Validated has 1,392 questions tagged #mixed-model that are unanswere (of 3,337 total questions)
-- I am trying to introduce mixed effects model as a data science(-*ish*) statistical method that can be useful and is easy to estimate and interpret.
+## Expectancy-value theory
+
+We choose things that we think we *can do well* and that are *valuable* to us
+
+We do these in some *context*: our sense of belonging impacts what we choose to do
+
+## An argument about RMarkdown
+
+- This presentation will make the argument that **you can use RMarkdown to solve
+problems that are important to you**
+- In doing so, you can **participate in a cool community of data scientists in education!**
 
 ---
 
